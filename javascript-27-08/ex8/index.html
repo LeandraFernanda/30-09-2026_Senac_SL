@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+
+    #contador {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .botoes {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="contador">0</h1>
+
+  <div class="botoes">
+    <button id="diminuir">-</button>
+    <button id="aumentar">+</button>
+  </div>
+
+  <script>
+    // 1. Variável
+    let valor = 0;
+
+    // Seleção dos elementos do HTML
+    const elementoContador = document.getElementById('contador');
+    const btnAumentar = document.getElementById('aumentar');
+    const btnDiminuir = document.getElementById('diminuir');
+
+    // 2. Evento de clique para aumentar
+    btnAumentar.addEventListener('click', function() {
+      // 3. Operador (adição)
+      valor++; 
+      
+      // 4. textContent (atualiza o texto no HTML)
+      elementoContador.textContent = valor;
+    });
+
+    // 2. Evento de clique para diminuir
+    btnDiminuir.addEventListener('click', function() {
+      // 3. Operador (subtração)
+      valor--; 
+      
+      // 4. textContent (atualiza o texto no HTML)
+      elementoContador.textContent = valor;
+    });
+  </script>
+
+</body>
+</html>
