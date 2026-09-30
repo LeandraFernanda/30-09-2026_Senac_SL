@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(2024-ford-mustang-dark.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Archivo Black", sans-serif;
+  letter-spacing: 2px;
+}
+
+#openModalBtn,
+#signupBtn {
+  cursor: pointer;
+  font-family: inherit;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: rgb(21, 131, 227);
+  color: white;
+  font-size: 16px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.overlay.open {
+  display: block;
+  opacity: 1;
+}
+.overlay.closed {
+  opacity: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: white;
+  color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  -webkit-text-fill-color: initial;
+}
+.modal.open {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal.closed {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 3%;
+  width: 800px;
+  color: white;
+  background-size: cover;
+  background-image: url(imagem.jpg);
+  aspect-ratio: 3/2;
+  font-size: 100px;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+h2 {
+  display: inline;
+  color: rgb(102, 81, 221);
+}
+p {
+  display: inline;
+  color: rgb(90, 66, 177);
+}
+.modal-footer section.top img {
+  display: block;
+  height: 10px;
+  margin: 0 0 0px;
+}
+.modal-footer section.top ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (width > 480px) {
+  .modal-footer article button {
+    width: 70%;
+  }
+
+  .modal-footer section.top ul {
+    padding-right: 10%;
+  }
+}
+
+@media (width > 600px) {
+  .modal-footer article {
+    flex-direction: row;
+    min-height: 120px;
+    margin: -70px 20px 20px;
+    padding: 30px 50px 30px;
+  }
+
+  .modal-footer section.top ul {
+    grid-template-columns: repeat(4, 1fr);
+    padding-right: 0;
+  }
+}
+
+.modal-footer section.top ul li h3 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ec5b5b;
+  margin-bottom: 16px;
+}
+
+.modal-footer section.top ul li a {
+  display: block;
+  margin-bottom: 18px;
+  color: #620fce;
+}
