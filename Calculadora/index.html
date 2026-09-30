@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./IMG/calculator.png" type="image/x-icon">
+
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="./CSS/main.css">
+</head>
+
+<body>
+
+    <main class="calculator">
+
+        <section class="calculator-display">
+
+            <div id="previous-operation" class="previous-operation"></div>
+
+            <div id="current-display" class="current-display">
+                0
+            </div>
+
+        </section>
+
+        <section class="calculator-buttons">
+
+            <button class="button function" data-action="clear">
+                C
+            </button>
+
+            <button class="button function" data-action="delete">
+                ⌫
+            </button>
+
+            <button class="button function" data-action="percentage">
+                %
+            </button>
+
+            <button class="button operator" data-operator="/">
+                ÷
+            </button>
+
+
+            <button class="button number" data-number="7">
+                7
+            </button>
+
+            <button class="button number" data-number="8">
+                8
+            </button>
+
+            <button class="button number" data-number="9">
+                9
+            </button>
+
+            <button class="button operator" data-operator="*">
+                ×
+            </button>
+
+
+            <button class="button number" data-number="4">
+                4
+            </button>
+
+            <button class="button number" data-number="5">
+                5
+            </button>
+
+            <button class="button number" data-number="6">
+                6
+            </button>
+
+            <button class="button operator" data-operator="-">
+                −
+            </button>
+
+
+            <button class="button number" data-number="1">
+                1
+            </button>
+
+            <button class="button number" data-number="2">
+                2
+            </button>
+
+            <button class="button number" data-number="3">
+                3
+            </button>
+
+            <button class="button operator" data-operator="+">
+                +
+            </button>
+
+
+            <button class="button function" data-action="toggle-sign">
+                +/−
+            </button>
+
+            <button class="button number" data-number="0">
+                0
+            </button>
+
+            <button class="button number" data-number=".">
+                .
+            </button>
+
+            <button class="button equals" data-action="calculate">
+                =
+            </button>
+
+        </section>
+
+        <section class="history">
+
+            <div class="history-header">
+                <h2>Histórico</h2>
+
+                <button id="clear-history">
+                    Limpar
+                </button>
+            </div>
+
+            <ul id="history-list"></ul>
+
+        </section>
+
+    </main>
+    <div class="carrossel">
+
+    <div class="slides">
+
+        <div class="slide">
+            <h2>Slide 1</h2>
+            <p>Conteúdo do primeiro slide.</p>
+        </div>
+
+        <div class="slide">
+            <h2>Slide 2</h2>
+            <p>Conteúdo do segundo slide.</p>
+        </div>
+
+        <div class="slide">
+            <h2>Slide 3</h2>
+            <p>Conteúdo do terceiro slide.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<button id="anterior">Anterior</button>
+<button id="proximo">Próximo</button>
+
+    <script src="./JS/main.js"></script>
+
+</body>
+</html>
+
+
+
